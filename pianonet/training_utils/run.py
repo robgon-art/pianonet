@@ -174,7 +174,7 @@ class Run(Logger):
                 pickle.dump(model_initializer['params'], file)
 
             model_creation_command = "python " + model_initializer[
-                'path'] + " " + model_parameters_file_path + " " + model_output_path
+                'path'] + " '" + model_parameters_file_path + "' '" + model_output_path + "'"
             self.log("Calling model creator with command:")
             self.log(model_creation_command)
 
